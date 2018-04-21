@@ -1,0 +1,13 @@
+@import "../../../style/mixins.scss";
+
+.cus_jumbotron {
+  background-color: #ffffff;
+
+  .cus_container {
+    max-width: 40rem;
+  }
+
+  .cus_btn {
+    margin: 8px 3px;
+  }
+}

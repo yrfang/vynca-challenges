@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import styles from './app.scss';
+import Header from './Header';
+import Jumbotron from './Jumbotron';
+import Main from './Main';
+import Footer from './Footer';
 
 export default class App extends Component {
   render() {
     return (
-      <div className={styles.test}>Hello Vynca</div>
+      <div>
+        <Header />
+        <Jumbotron />
+        <Main />
+        <Footer />
+      </div>
     );
   }
 }
