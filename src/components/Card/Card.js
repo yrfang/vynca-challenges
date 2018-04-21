@@ -5,8 +5,8 @@ const Card = () => {
 
   return (
     <div href="#" className={styles.card_container}>
-      <div className={styles.image_box}>
-        <i className="fa fa-image"></i>
+      <div className={styles.card_img}>
+        <i className={`fa fa-image ${styles['img_icon']}`}></i>
       </div>
       <div className={styles.card_body}>
         <p className={styles.card_text}>

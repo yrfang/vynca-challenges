@@ -15,14 +15,12 @@ class Header extends Component {
       <header>
         <div className="navbar navbar-dark bg-dark box-shadow">
           <div className="container d-flex justify-content-between">
-            <a href="#" className="navbar-brand d-flex align-items-center">
+            <a href="#" className="navbar-brand">
               <i className={`fa fa-camera ${styles['customizedIcon_color']}`}></i>
               <strong>Album</strong>
             </a>
           </div>
         </div>
-
-
       </header>
     );
   }

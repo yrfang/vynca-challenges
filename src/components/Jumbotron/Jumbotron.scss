@@ -2,12 +2,18 @@
 
 .cus_jumbotron {
   background-color: #ffffff;
+  padding: 96px 32px;
+  margin-bottom: 0px;
+
+  @media screen and (max-width: $breakpoint_sd) {
+    padding: 48px 16px;
+  }
 
   .cus_container {
     max-width: 40rem;
   }
 
-  .cus_btn {
-    margin: 8px 3px;
+  .jumbotron_heading {
+    font-weight: 300;
   }
 }

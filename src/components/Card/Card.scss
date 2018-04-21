@@ -1,5 +1,31 @@
 @import "../../../style/mixins.scss";
 
 .card_container {
-  border: solid 1px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}
+
+.card_img {
+  height: 225px;
+  width: 100%;
+  display: block;
+  background-color: $document_color_gray;
+  position: relative;
+
+  .img_icon {
+    color: #ffffff;
+    font-size: 36px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.card_body {
+  padding: 20px;
+
+  word-wrap: break-word;
+  background-color: #ffffff;
 }
