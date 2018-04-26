@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import styles from './Card.scss';
 
-const Card = () => {
+const Card = ({
+  url
+}) => {
 
   return (
     <div href="#" className={styles.card_container}>
-      <div className={styles.card_img}>
-        <i className={`fa fa-image ${styles['img_icon']}`}></i>
+      <div className={styles.card_img} style={{ backgroundImage: `url(${url})` }}>
+        {
+          (url === null) && (<i className={`fa fa-image ${styles['img_icon']}`}></i>)
+        }
       </div>
       <div className={styles.card_body}>
         <p className={styles.card_text}>
