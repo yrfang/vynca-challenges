@@ -6,27 +6,28 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-			meneToggleOpen: false
+			menuToggleOpen: false
     };
 
     this.toggleDropdownMenu = this.toggleDropdownMenu.bind(this);
   }
 
   toggleDropdownMenu() {
-    let menuState = !this.state.meneToggleOpen;
-    this.setState({
-      meneToggleOpen: menuState
+    this.setState((prevState) => {
+      return {
+        menuToggleOpen: !prevState.menuToggleOpen
+      };
     });
   }
 
   render() {
     const {
-      meneToggleOpen
+      menuToggleOpen
     } = this.state;
 
     return (
       <header className={styles.header}>
-        <div className={meneToggleOpen ? `${styles['toggle_container']} ${styles['active']}` : `${styles['toggle_container']}`}>
+        <div className={menuToggleOpen ? `${styles['toggle_container']} ${styles['active']}` : `${styles['toggle_container']}`}>
           <div className="container">
             <div className="row">
               <div className="col-sm-8 col-md-7 py-4">
