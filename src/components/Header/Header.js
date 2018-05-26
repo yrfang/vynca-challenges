@@ -8,11 +8,9 @@ class Header extends Component {
     this.state = {
 			menuToggleOpen: false
     };
-
-    this.toggleDropdownMenu = this.toggleDropdownMenu.bind(this);
   }
 
-  toggleDropdownMenu() {
+  toggleDropdownMenu = () => {
     this.setState((prevState) => {
       return {
         menuToggleOpen: !prevState.menuToggleOpen

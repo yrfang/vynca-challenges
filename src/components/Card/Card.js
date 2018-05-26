@@ -12,24 +12,19 @@ class Card extends Component {
       isEdit: false,
       editValue: this.props.text
     };
-
-    this.onClickEditButton = this.onClickEditButton.bind(this);
-    this.onChangeEditInput = this.onChangeEditInput.bind(this);
-    this.onClickPostButton = this.onClickPostButton.bind(this);
   }
 
-  onClickEditButton() {
+  onClickEditButton = () => {
     this.setState({ isEdit: true });
   }
 
-  onChangeEditInput(event) {
+  onChangeEditInput = (event) => {
+    console.log(event.target.value);
+    
     this.setState({ editValue: event.target.value });
   }
 
-  onClickPostButton() {
-    const id = this.props.id;
-    const editValue = this.state.editValue;
-
+  onClickPostButton = (id, editValue) => () => {
     axios(`${ROOT_URL}/${id}`, {
       method: "put",
       data: {
@@ -70,7 +65,7 @@ class Card extends Component {
           }
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
-              <button type="button" className="btn btn-sm btn-outline-secondary" onClick={this.onClickPostButton}>Post</button>
+              <button type="button" className="btn btn-sm btn-outline-secondary" onClick={this.onClickPostButton(id, editValue)}>Post</button>
               <button type="button" className="btn btn-sm btn-outline-secondary" onClick={this.onClickEditButton}>Edit</button>
             </div>
             <small className="text-muted">{lastModifyTime}</small>
